@@ -1,44 +1,30 @@
-# Ignore virtual environments
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
 venv/
 env/
 
-# Ignore datasets and raw files
-*.csv
-*.xlsx
-*.xls
-*.parquet
-*.json
-*.zip
-*.rar
-
-data/
-artifacts/
-datasets/
-raw_data/
-
-# Ignore model training logs
-catboost_info/
-logs/
-*.log
-*.txt
-
-# Ignore temporary files
-__pycache__/
-*.pyc
-.DS_Store
-
-# Ignore very large model files (keep only small pkl)
-models/*.h5
-models/*.bin
-models/*.joblib
-models/*.model
-
-# Keep small .pkl files (IMPORTANT)
-!models/*.pkl
-
-# Ignore notebook checkpoints
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Ignore OS files
+# Data and models
+*.csv
+*.pkl
+models/
+
+# Large files - consider Git LFS for model files over 50MB
+*.h5
+*.pt
+
+# OS files
+.DS_Store
 Thumbs.db
-desktop.ini
+
+# Logs
+*.log
+
+# VS Code settings
+.vscode/
